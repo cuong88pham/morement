@@ -18,7 +18,7 @@ function reArrayFiles(&$file_post)
 
 if ($_FILES['files']) {
     $files = reArrayFiles($_FILES['files']);
-    
+
     $result = array();
 
     foreach ($files as $file) {
@@ -40,7 +40,7 @@ if ($_FILES['files']) {
             $size = getimagesize($uploadDir);
 
             $result[] = array(
-                "url" => 'http://' . $_SERVER['SERVER_ADDR'] . ($_SERVER['SERVER_PORT'] != 80 ? ":" . $_SERVER['SERVER_PORT'] : '') . '/' . $uploadDir,
+                "url" => 'http://http://10.240.60.151' . ($_SERVER['SERVER_PORT'] != 80 ? ":" . $_SERVER['SERVER_PORT'] : '') . '/' . $uploadDir,
                 "name" => $fileName,
                 "width" => $size[0],
                 "height" => $size[1],
