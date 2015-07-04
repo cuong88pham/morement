@@ -18,6 +18,7 @@ function reArrayFiles(&$file_post)
 
 if ($_FILES['files']) {
     $files = reArrayFiles($_FILES['files']);
+    
     $result = array();
 
     foreach ($files as $file) {
@@ -58,6 +59,6 @@ if ($_FILES['files']) {
 
 <form action="./" method="post" enctype="multipart/form-data">
     Send these files:<br/>
-    <input name="files" type="file" multiple/><br/>
+    <input name="files[]" type="file" multiple/><br/>
     <input type="submit" value="Send files"/>
 </form>
