@@ -40,7 +40,7 @@ if ($_FILES['files']) {
             $size = getimagesize($uploadDir);
 
             $result[] = array(
-                "url" => 'http://130.211.244.98/' . ($_SERVER['SERVER_PORT'] != 80 ? ":" . $_SERVER['SERVER_PORT'] : '') . '/' . $uploadDir,
+                "url" => 'http://130.211.244.98' . ($_SERVER['SERVER_PORT'] != 80 ? ":" . $_SERVER['SERVER_PORT'] : '') . '/' . $uploadDir,
                 "name" => $fileName,
                 "width" => $size[0],
                 "height" => $size[1],
