@@ -1,5 +1,10 @@
 <?php
 
+ini_set("display_errors", 1);
+ini_set("track_errors", 1);
+ini_set("html_errors", 1);
+error_reporting(E_ALL);
+
 require_once('libs/Psr/MessageInterface.php');
 require_once('libs/Psr/ResponseInterface.php');
 require_once('libs/Psr/RequestInterface.php');
@@ -76,5 +81,6 @@ try {
 
     echo implode(' ', array($result['streetNumber'], $result['streetName'])) . ', ' . $result['adminLevels'][2]['name'] . ', ' . $result['adminLevels'][1]['name'] . ', ' . $result['country'];
 } catch (Exception $e) {
+    var_dump($e);
     echo '';
 }
